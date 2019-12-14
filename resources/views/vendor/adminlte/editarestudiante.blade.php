@@ -37,18 +37,19 @@
                       <label>Semestre</label>
                       <select name="idSemestre">
                       @foreach($datos as $item)
-                            <option  value="{{$item->id}}">{{$item->semestre}}</option>
+                            <option  value="{{$item->id}}">{{$item->semestre}} {{$item->paralelo}}</option>
                       @endforeach
                       </select>
                     </div> 
-                    <div class="form-group">
+
+                   {{--}} <div class="form-group">
                       <label>Paralelo</label>
                       <select name="idSemestre">
                       @foreach($datos as $item)
                             <option  value="{{$item->id}}">{{$item->paralelo}}</option> 
                       @endforeach
                       </select>
-                    </div>
+                    </div>--}}
 
 
                   </div>
