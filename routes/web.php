@@ -26,7 +26,8 @@ Route::get('eliminarsemestre/{id}','SemestreController@eliminar');
 Route::get('estudiante','EstudianteController@index');
 Route::post('guardarestudiante','EstudianteController@guardar');
 Route::get('eliminarestudiante/{id}','EstudianteController@eliminar');
-
+Route::get('editarestudiante/{id}','EstudianteController@editar');
+Route::post('actualizarestudiante/{id}','EstudianteController@actualizar');
 
 
 

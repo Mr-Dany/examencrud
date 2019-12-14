@@ -80,9 +80,16 @@ class EstudianteController extends Controller
      * @param  \App\Estudiante  $estudiante
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Estudiante $estudiante)
-    {
-        //
+    public function actualizar(Request $request,$id)
+    {  
+            $tipo=Estudiante::find($id);
+            $tipo->nombre=$request->nombre;
+            $tipo->apellido=$request->apellido;
+            $tipo->cedula=$request->cedula;
+            $tipo->sexo=$request->sexo;
+            $tipo->idSemestre=$request->idSemestre;
+            $tipo->save();
+            return  redirect()->action('EstudianteController@index');
     }
 
     /**
